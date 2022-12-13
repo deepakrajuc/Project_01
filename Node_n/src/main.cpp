@@ -15,7 +15,7 @@
 #define   MESH_PASSWORD   "MESHpassword" //password for your MESH
 #define   MESH_PORT       5555 //default port
 
-int nodeNumber = 3;                               //type the node name
+int nodeNumber = 2;                               //type the node name
 
 //String to send to other nodes with sensor readings
 String readings;
@@ -47,6 +47,7 @@ void sendMessage () {
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
   Serial.printf("Received from %u msg=%s\n", from, msg.c_str());
+  mesh.sendSingle(from, msg);                                       //send receiving message to other node
   JSONVar myObject = JSON.parse(msg.c_str());
   
     int node = myObject["node"];
