@@ -109,11 +109,11 @@ void setup() {
 void loop() {
   // it will run the user scheduler as well
   mesh.update();
-//  Serial.println("=================");
-//  Serial.println(node1data);
-//  Serial.println(node2data);
-//  Serial.println(node3data);
-//  Serial.println("=================");
+  Serial.println("=================");
+  Serial.println(node1data);
+  Serial.println(node2data);
+  Serial.println(node3data);
+  Serial.println("=================");
  
   Serial2.print(node1data); Serial2.print("A");                      //sending the 3 data to ESp32 using UART2
   Serial2.print(node2data); Serial2.print("B");

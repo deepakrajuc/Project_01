@@ -15,7 +15,7 @@
 #define   MESH_PASSWORD   "MESHpassword" //password for your MESH
 #define   MESH_PORT       5555 //default port
 
-int nodeNumber = 2;                               //type the node name
+int nodeNumber = 1;                               //type the node name
 
 //String to send to other nodes with sensor readings
 String readings;
